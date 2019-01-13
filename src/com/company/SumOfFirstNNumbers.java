@@ -10,7 +10,6 @@ public class SumOfFirstNNumbers {
     public SumOfFirstNNumbers(int upToNumber){
         System.out.println("Sum from 1 to " + upToNumber + " = " + calculateSum(upToNumber));
     }
-
     /**
      * returns the sum of all numbers from 0 to a given number
      * @param x given number

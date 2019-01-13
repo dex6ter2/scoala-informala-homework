@@ -18,7 +18,6 @@ public class SquareArea {
     public static void main (String[] args){
 
     }
-
     /**
      * displays the area of a square
      * @param a lenght of the square

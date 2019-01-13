@@ -28,7 +28,6 @@ public class RectangleAreaAndPerimeter {
      * @param lenght string with value that may be converted to float
      * @param width string with value that may be converted to float
      */
-
     public static void calculateRectangleAreaAndPerimeter(String lenght, String width){
         float len = Float.parseFloat(lenght);
         float wid = Float.parseFloat(width);

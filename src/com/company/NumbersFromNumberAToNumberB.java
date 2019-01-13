@@ -24,7 +24,6 @@ public class NumbersFromNumberAToNumberB {
     public static void main (String[] args){
 
     }
-
     /**
      * prints all the number between 2 strings starting at the first string
      * @param a first string that has a value that may be converted to float

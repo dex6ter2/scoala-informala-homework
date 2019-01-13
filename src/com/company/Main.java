@@ -23,7 +23,6 @@ public class Main {
         runningSelection();
 
     }
-
     /**
      * displays the menu with details about what the selected class will do
      */

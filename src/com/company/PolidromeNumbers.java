@@ -25,7 +25,6 @@ public class PolidromeNumbers {
      * @param a string that holds and int value
      * @return a string with the answers for the question "is this string as polindrome?"
      */
-
     public static String checkPolindrome(String a){
         String b = a;
         int len = b.length();

@@ -18,7 +18,6 @@ public class PrimeNumbers {
     public static void main(String[] args){
 
     }
-
     /**
      * displays all the prime numbers from 2 to a number from a string
      * @param a string with a value that may be converted to int

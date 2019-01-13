@@ -18,7 +18,6 @@ public class DisplayBiggestDigit {
 
     public static void main(String[] args){
     }
-
     /**
      * returns the bigest number from a string
      * @param a string that has as value a number

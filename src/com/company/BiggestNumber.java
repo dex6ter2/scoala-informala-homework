@@ -36,7 +36,6 @@ public class BiggestNumber {
      * @param b second string that helds a float number
      * @param c third string that helds a float number
      */
-
     public static void returnBiggestNumber(String a, String b, String c){
         float firstNumber = Float.parseFloat(a);
         float secondNumber = Float.parseFloat(b);

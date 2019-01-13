@@ -27,7 +27,6 @@ public class SmallestNumberFromCollection {
      * @param a collection that has at least a number
      * @return smallest number from the collection provided
      */
-
     public static int sortare(int [] a){
         int [] collection = a;
         Arrays.sort(collection);
