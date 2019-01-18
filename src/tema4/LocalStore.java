@@ -8,10 +8,10 @@ public class LocalStore {
     private float price;
 
     void setStock(int _stock){
-        stock = _stock;
+        this.stock = _stock;
     }
     void setId(String _id){
-        id = _id;
+        this.id = _id;
     }
     void setWeight(float weight){
         this.weight = weight;
@@ -26,22 +26,22 @@ public class LocalStore {
     }
 
     int getStock(){
-        return stock;
+        return this.stock;
     }
 
     String getId(){
-        return id;
+        return this.id;
     }
 
     float getWeight(){
-        return weight;
+        return this.weight;
     }
 
     String getValidityDate(){
-        return validityDate;
+        return this.validityDate;
     }
 
     float getPrice(){
-        return price;
+        return this.price;
     }
 }
