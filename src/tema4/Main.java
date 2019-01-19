@@ -7,8 +7,9 @@ import java.util.List;
 import java.util.Scanner;
 
 public class Main {
+    static List<LocalStore> listOfSoldItems = new ArrayList<LocalStore>();
     static List<Animal> listOfAnimalProducts = new ArrayList<Animal>();
-    static List<Vegetable> listOfVegetablesProducts = new ArrayList<Vegetable>();//TODO create a list that includes this and the other as a reference
+    static List<Vegetable> listOfVegetablesProducts = new ArrayList<Vegetable>();
     public static void main(String[] args) {
         mainProducts();
         listingMenu();
@@ -47,16 +48,41 @@ public class Main {
         int selection;
         selection = Integer.parseInt(createVariableString("intPositive"));
         if (selection <= listOfAnimalProducts.size()+listOfVegetablesProducts.size()){
+            System.out.println("Please provide the quantity desired to sell");
+            int stock = Integer.parseInt(createVariableString("intPositive"));
             if (selection <= listOfAnimalProducts.size()){
+                if (stock <= listOfAnimalProducts.get(selection-1).getStock()){
+                    addToSellList(listOfAnimalProducts.get(selection-1).getId(),listOfAnimalProducts.get(selection-1).getStock());
+                    listOfAnimalProducts.get(selection-1).setStock(listOfAnimalProducts.get(selection-1).getStock()-stock);
+                }else{
+                    System.out.println("The quantity provided is not available, the current stock for the "
+                            + listOfAnimalProducts.get(selection-1).getId()+ " is " + listOfAnimalProducts.get(selection-1).getStock() );
+                }
                 System.out.println(listOfAnimalProducts.get(selection-1).getId());
                 System.out.println(listOfAnimalProducts.get(selection-1).getStock());
             }else {
-                System.out.println("vegies");
+                selection = selection - listOfAnimalProducts.size();
+                if (stock <= listOfVegetablesProducts.get(selection-1).getStock()){
+                    addToSellList(listOfVegetablesProducts.get(selection-1).getId(),listOfVegetablesProducts.get(selection-1).getStock());
+                    listOfVegetablesProducts.get(selection-1).setStock(listOfVegetablesProducts.get(selection-1).getStock()-stock);
+                }else{
+                    System.out.println("The quantity provided is not available, the current stock for the "
+                            + listOfVegetablesProducts.get(selection-1).getId()+ " is " +listOfVegetablesProducts.get(selection-1).getStock() );
+                }
+                System.out.println(listOfVegetablesProducts.get(selection-1).getId());
+                System.out.println(listOfVegetablesProducts.get(selection-1).getStock());
             }
         }else{
             System.out.println("The selection provided was not valid!");
         }
 
+    }
+    private static void addToSellList(String id, int stock){
+        LocalStore sellProduct = new LocalStore();
+        sellProduct.setId(id);
+        sellProduct.setSellDate(LocalDate.now().toString());
+        sellProduct.setStock(stock);
+        listOfSoldItems.add(sellProduct);
     }
     private static void mainProducts(){
         Animal milk = new Animal();

@@ -6,6 +6,7 @@ public class LocalStore {
     private float weight;
     private String validityDate;
     private float price;
+    private String sellDate;
 
     void setStock(int _stock){
         this.stock = _stock;
@@ -23,6 +24,9 @@ public class LocalStore {
 
     void setPrice(float price){
         this.price = price;
+    }
+    void setSellDate(String sellDate){
+        this.sellDate = sellDate;
     }
 
     int getStock(){
@@ -43,5 +47,8 @@ public class LocalStore {
 
     float getPrice(){
         return this.price;
+    }
+    String getSellDate(){
+        return this.sellDate;
     }
 }
