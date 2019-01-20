@@ -191,7 +191,7 @@ public class Main {
 
     /**
      * verify if the value hold by the string is a valid date
-     * @param date
+     * @param date value to be checked
      * @return true if value of string holds a valid date if it does not will return false
      */
     private static boolean checkDate(String date){
