@@ -44,11 +44,11 @@ public class Main {
                 System.out.println("The poducts available for selling and the current stock");
                 displayTheProducts();
                 System.out.println("Please select the product you desire to sell");
-                addStock();//TODO sell function
+                addStock();
                 break;
             case "3" :
                 System.out.println("Please provide the date for the sell report using the format YYYY-MM-DD");
-                returnProductsOfSellList(createVariableString("dateSell"));//TODO report
+                returnProductsOfSellList(createVariableString("dateSell"));
                 break;
             case "4" :
                 break;
