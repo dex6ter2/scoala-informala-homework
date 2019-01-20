@@ -1,5 +1,11 @@
 package tema4;
 
+/**
+ * parent for Vegetable and Animal class
+ * holds attributes used for both classes.
+ * attribute sellDate used only for reporting
+ */
+
 public class LocalStore {
     private int stock;
     private String id;
