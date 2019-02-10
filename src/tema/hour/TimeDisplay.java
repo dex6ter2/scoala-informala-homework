@@ -75,7 +75,7 @@ public class TimeDisplay {
      * @return true if a valid hour value was received
      */
 
-    private static boolean validateHour(String b){
+    public static boolean validateHour(String b){
         boolean check = false;
         if (checkIfIntNumber(b)==false){
             check = true;
@@ -97,14 +97,14 @@ public class TimeDisplay {
      * @return true if a valid minutes value was received
      */
 
-    private static boolean validateMinutes(String b){
+    public static boolean validateMinutes(String b){
         boolean check = false;
         if (checkIfIntNumber(b)==false){
             check = true;
             return check;
         }
         int minutes = Integer.parseInt(b);
-        if (minutes < 0 || minutes >60){
+        if (minutes < 0 || minutes >=60){
             check = true;
         }
         return check;
